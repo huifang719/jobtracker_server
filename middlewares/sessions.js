@@ -1,5 +1,6 @@
 const expressSession = require('express-session')
 
+
 const sessions = expressSession({
     key: 'user-sid',
     secret: process.env.EXPRESS_SESSION_SECRET,
