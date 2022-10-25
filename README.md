@@ -9,7 +9,7 @@ This is app where user can login and search for jobs, as well as save jobs, addi
 ```zsh
 $ git clone https://github.com/huifang719/jobtracker_server.git jobtracker
 $ cd jobtracker
-$ node app.js
+$ npm i
 ```
 - Add in-app screenshots.
 
