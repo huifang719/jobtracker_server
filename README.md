@@ -32,7 +32,7 @@ $ npm i
 ## :scream: Bugs to fix :poop:
 - user cant stay logged in when reload(fixed)
 - passing state data to unrelated components unsuccessfully
-- Buttons to not click too many times (cause its broken :unamused:)
+- trying to using api without Oauth, but we will see
 
 ## :sob: Lessons learnt
 What I would do differently if I could wind back the clock...
