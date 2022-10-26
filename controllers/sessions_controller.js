@@ -34,7 +34,7 @@ router.post('/', (req, res) => {
 
 router.delete('/', (req, res) => {
     if (req.session.userId) {
-        req.session.delete()
+        req.session.destroy()
     } else {
         res.json({ error: 'No user logged in' }) 
     }
