@@ -1,8 +1,8 @@
 const express = require('express')
-const dotenv = require('dotenv').config()
+// const dotenv = require('dotenv').config()
 const app = express()
-// const PORT = process.env.PORT || 3001;
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
+// const PORT = 3001;
 const logger = require('./middlewares/logger')
 const sessions = require('./middlewares/sessions')
 
@@ -20,18 +20,18 @@ app.use('/api/users', usersController)
 app.use('/api/sessions', sessionsController) 
 
 //search for job 
-const app_id = process.env.adzuna_api_client_id
-const app_key = process.env.adzuna_api_key
 app.use('/api/search', (req, res) => {
-  fetch(`https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${app_id}&app_key=${app_key}}`)
+const app_id = process.env.api_client_id
+const app_key = process.env.adzuna_api_key
+res.json(app_key)
 })
 
 
-// if (process.env.NODE_ENV === 'production') {
-//   const path = require('path')
-//   app.use(express.static(path.join(__dirname, 'build')));
+if (process.env.NODE_ENV === 'production') {
+  const path = require('path')
+  app.use(express.static(path.join(__dirname, 'build')));
 
-//   app.get('/*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'build', 'index.html'));
-//   });
-// }
+  app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
+}
