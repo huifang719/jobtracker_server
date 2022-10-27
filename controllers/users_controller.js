@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
           .create(name, email, passwordDigest)
           .then(email => res.json(email))
     }   
-  }) 
+  })
 })
 
 module.exports = router

@@ -11,4 +11,13 @@ router.post('/', (req, res) => {
 
     .then(res => console.log("saved"))
 })
+
+router.get('/:email', (req, res) => {
+  const email = req.params.email
+  console.log(email)
+  SavedJob 
+    .findAll(email)
+    .then(jobs => res.json(jobs))
+})
+
 module.exports = router

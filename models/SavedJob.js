@@ -11,6 +11,14 @@ const SavedJob = {
     return db
       .query(sql, [title, description, location, url, email])
       .then(dbRes =>dbRes.rows[0])
+  },
+  
+  findAll: email => {
+    const sql = 'SELECT * FROM jobs WHERE email = $1'
+
+    return db
+      .query(sql, [email])
+      .then(dbRes => dbRes.rows)
   }
 }
 
