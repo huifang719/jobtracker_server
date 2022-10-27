@@ -38,7 +38,7 @@ $ npm i
 - show password icon in the input field
 
 ## :sob: Lessons learnt
-What I would do differently if I could wind back the clock...
-
+manage time better
+let go if you cant figure out a few feature, can always come back later
 ## :white_check_mark: Future features
 On my way to do the toggle on save/unsave jobs
