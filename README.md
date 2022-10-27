@@ -2,6 +2,8 @@
 This is app where user can login and search for jobs, as well as save jobs, adding important dates to their calender!
 
 ## :computer: [Click here](https://dry-bayou-44223.herokuapp.com/) to see my live project!
+## wireframe
+![image](https://user-images.githubusercontent.com/112321294/198415697-245053f1-46ff-49c0-9164-2b148a4e655c.png)
 
 ## :page_facing_up: About
 - How to use my awesome project.
