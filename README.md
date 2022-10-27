@@ -1,7 +1,7 @@
 # JobTracker
 This is app where user can login and search for jobs, as well as save jobs, adding important dates to their calender!
 
-## :computer: [Click here](#) to see my live project!
+## :computer: [Click here](https://dry-bayou-44223.herokuapp.com/) to see my live project!
 
 ## :page_facing_up: About
 - How to use my awesome project.
@@ -27,15 +27,15 @@ $ npm i
 - psql for database
 - using Regex for checking password strength 
 - using google calender api
-- using indeed api
+- using adzuna api for job search
 
 ## :scream: Bugs to fix :poop:
 - user cant stay logged in when reload(fixed)
-- passing state data to unrelated components unsuccessfully
-- trying to using api without Oauth, but we will see
+- passing state data to unrelated components unsuccessfully(fixed)
+- layout is very different between localhost and heroku(cant figure out why and how to solve it yet)
 
 ## :sob: Lessons learnt
 What I would do differently if I could wind back the clock...
 
 ## :white_check_mark: Future features
-Cool things I would add if I can keep working on this
+On my way to do the toggle on save/unsave jobs
