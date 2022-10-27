@@ -20,8 +20,7 @@ app.use('/api/sessions', sessionsController)
 
 //search for job 
 app.use('/api/search', (req, res) => {
-const app_id = process.env.api_client_id
-const app_key = process.env.adzuna_api_key
+const app_key = process.env.REACT_APP_adzuna_api_key
 res.json(app_key)
 })
 
