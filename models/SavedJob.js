@@ -10,7 +10,7 @@ const SavedJob = {
 
     return db
       .query(sql, [title, description, location, url, email])
-      .then(dbRes =>dbRes.rows[0].title)
+      .then(dbRes =>dbRes.rows[0])
   }
 }
 
