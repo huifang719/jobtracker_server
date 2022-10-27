@@ -33,6 +33,7 @@ $ npm i
 - user cant stay logged in when reload(fixed)
 - passing state data to unrelated components unsuccessfully(fixed)
 - layout is very different between localhost and heroku(cant figure out why and how to solve it yet)
+- show password icon in the input field
 
 ## :sob: Lessons learnt
 What I would do differently if I could wind back the clock...
