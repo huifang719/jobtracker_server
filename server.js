@@ -7,7 +7,7 @@ const sessions = require('./middlewares/sessions')
 
 const usersController = require('./controllers/users_controller')
 const sessionsController = require('./controllers/sessions_controller')
-
+const savedJobsController = require('./controllers/savedJobs_controller')
 app.listen(PORT, 
   () => console.log(`server listening to port ${PORT}`))
 
@@ -25,6 +25,8 @@ const app_key = process.env.adzuna_api_key
 res.json(app_key)
 })
 
+//save jobs 
+app.use('/api/save', savedJobsController)
 
 if (process.env.NODE_ENV === 'production') {
   const path = require('path')

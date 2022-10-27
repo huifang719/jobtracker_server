@@ -6,3 +6,11 @@ CREATE TABLE users(
   name TEXT,
   email TEXT,
   password_digest TEXT);
+
+CREATE TABLE jobs(
+  id SERIAL PRIMARY KEY,
+  title TEXT,
+  description TEXT,
+  location TEXT,
+  url TEXT,
+  email TEXT);
