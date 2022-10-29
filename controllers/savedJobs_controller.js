@@ -20,4 +20,29 @@ router.get('/:email', (req, res) => {
     .then(jobs => res.json(jobs))
 })
 
+router.get('/:email/:description', (req, res) => {
+  const email = req.params.email
+  const description = req.params.description
+  
+  SavedJob 
+    .findJob(email, description)
+    .then(job =>{
+      if (job) {
+        res.json(job)
+        console.log(job)
+      } else {
+        res.json('this job has not been saved')
+      }
+    })
+})
+
+router.delete('/:description', (req, res) => {
+  const description = req.params.description
+
+  SavedJob
+    .delete(description)
+    .then(() => res.json({ message: 'deleted successfully' }))
+})
+
+
 module.exports = router
