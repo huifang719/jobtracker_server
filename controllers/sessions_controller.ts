@@ -41,13 +41,16 @@ router.post('/', (req, res) => {
 
 router.delete('/', (req, res) => {
   const customSessionData: CustomSessionData = req.session as CustomSessionData;
-    if (customSessionData.userId) {
-        console.log(req)
-        req.session.destroy
-        res.json({messge: 'User has logged out!'})
-    } else {
-      res.status(400).send({error: "No user logged in"}) 
+    if (!customSessionData.userId) {
+      return res.status(400).send({error: "No user logged in"}) 
+    } 
+
+  req.session.destroy((err) => {
+    if (err) {
+      return res.status(500).send({ error: 'Error destroying session' });
     }
+    return res.clearCookie('session'); // optional: clears the session cookie from the client
+  })
 })
 
 export default router;
