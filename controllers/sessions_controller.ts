@@ -1,5 +1,5 @@
 import express from 'express';
-import { Session, SessionData } from 'express-session';
+import { SessionData } from 'express-session';
 import bcrypt from 'bcrypt';
 import User from '../models/User';
 import UserDto from '../dto/UserDto';
