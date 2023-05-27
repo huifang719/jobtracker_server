@@ -2,7 +2,7 @@
 
 // const db = new pg.Pool({
 //     database: 'job_tracker',
-//     password: '1111'
+//     password: '253344'
 // })
 
 // export default db;
@@ -28,7 +28,7 @@ if (process.env.DATABASE_URL) {
     db = new pg.Pool({
       database: localDbName
     })
-  }
+  } 
 }
 
 export default db;
