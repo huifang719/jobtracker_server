@@ -1,4 +1,4 @@
-import db from "../db/db";
+import db from "../db/db.js";
 
 const User = {
   create: (name: string, email: string, passwordDigest: string) => {
