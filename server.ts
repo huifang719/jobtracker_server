@@ -3,7 +3,7 @@ import logger from "./middleswares/logger.js";
 import sessions from "./middleswares/sessions.js";
 import usersController from "./controllers/users_controller";
 import sessionsController from "./controllers/sessions_controller.js";
-import savedJobsController from "./controllers/savedJobs_controlle.js";
+import savedJobsController from "./controllers/savedJobs_controller.js";
 import path from "path";
 
 const app = express();
