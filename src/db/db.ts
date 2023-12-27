@@ -7,22 +7,22 @@
 
 // export default db;
 
-import { Pool, PoolConfig } from "pg";
+import * as pg from "pg";
 
 const localDbName = "job_tracker";
-let db: Pool;
+let db: pg.Pool;
 
 if (process.env.DATABASE_URL) {
-  const poolConfig: PoolConfig = {
+  const poolConfig: pg.PoolConfig = {
     connectionString: process.env.DATABASE_URL,
     ssl: {
       rejectUnauthorized: false,
     },
   };
 
-  db = new Pool(poolConfig);
+  db = new pg.Pool(poolConfig);
 } else {
-  const poolConfig: PoolConfig = process.env.DB_PASSWORD
+  const poolConfig: pg.PoolConfig = process.env.DB_PASSWORD
     ? {
         database: localDbName,
         password: process.env.DB_PASSWORD,
@@ -31,7 +31,7 @@ if (process.env.DATABASE_URL) {
         database: localDbName,
       };
 
-  db = new Pool(poolConfig);
+  db = new pg.Pool(poolConfig);
 }
 
 export default db;
