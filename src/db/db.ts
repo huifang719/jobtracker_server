@@ -7,7 +7,7 @@
 
 // export default db;
 
-import * as pg from "pg";
+import pg from "pg";
 
 const localDbName = "job_tracker";
 let db: pg.Pool;
