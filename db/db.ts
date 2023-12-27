@@ -33,3 +33,5 @@ if (process.env.DATABASE_URL) {
 
   db = new Pool(poolConfig);
 }
+
+export default db;
