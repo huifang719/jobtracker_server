@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
-import SavedJob from "../models/SavedJob";
-import JobDto from "../dto/JobDto";
+import SavedJob from "../models/SavedJob.js";
+import JobDto from "../dto/JobDto.js";
 
 const router = express.Router();
 router.post("/", (req: Request, res: Response) => {
