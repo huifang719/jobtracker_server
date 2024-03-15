@@ -23,10 +23,9 @@ app.use("/api/search", (req, res) => {
 //save jobs
 app.use("/api/save", savedJobsController);
 //for production
-// console.log(__dirname);
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static(path.join(__dirname, "build")));
-//   app.get("/*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "build", "index.html"));
-//   });
-// }
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "dist")));
+  app.get("/*", (req, res) => {
+    res.sendFile(path.join(__dirname, "build", "index.html"));
+  });
+}
