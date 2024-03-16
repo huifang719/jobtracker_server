@@ -4,13 +4,14 @@ import sessions from "./middleswares/sessions.js";
 import usersController from "./controllers/users_controller.js";
 import sessionsController from "./controllers/sessions_controller.js";
 import savedJobsController from "./controllers/savedJobs_controller.js";
+import cors, { CorsOptions } from "cors";
 // import path from "path";
 const whitelist = [
   "http://localhost:3000",
   "https://jobtracker-ts.netlify.app",
 ];
-var corsOptions = {
-  origin: (origin: string, callback: any) => {
+var corsOptions: CorsOptions = {
+  origin: (origin: any, callback: any) => {
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
@@ -33,7 +34,7 @@ app.listen(PORT, () => console.log(`server listening to port ${PORT}`));
 app.use(logger);
 app.use(express.json());
 app.use(sessions);
-
+app.use(cors(corsOptions));
 app.use("/api/users", usersController);
 app.use("/api/sessions", sessionsController);
 
