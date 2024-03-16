@@ -7,7 +7,7 @@ import savedJobsController from "./controllers/savedJobs_controller.js";
 // import path from "path";
 const whitelist = [
   "http://localhost:3000",
-  "https://jobtracker-ts.netlify.app/",
+  "https://jobtracker-ts.netlify.app",
 ];
 var corsOptions = {
   origin: (origin: string, callback: any) => {
